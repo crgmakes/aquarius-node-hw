@@ -15,6 +15,6 @@ jobs:
   call-export-pcb:
     uses: crgmakes/kicad-extras/.github/workflows/crgm-ecad-release.yaml@main
     with:
-      name: 'Aquarius Hub'
-      repo-name: aquarius-hub-hw
-      file-name: aquarius-hub-hw
+      name: 'Aquarius Node'
+      repo-name: aquarius-node-hw
+      file-name: aquarius-node-hw
