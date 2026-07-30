@@ -1,6 +1,6 @@
-# Aquarius Hub Hardware
+# Aquarius Node Hardware
 
-All the source files for the hub hardware.
+All the source files for the generic node hardware. Fulfills both client and hub capabilities.
 
 # Software 
 
@@ -12,14 +12,14 @@ https://github.com/crgmakes/kicad-library.git
 
 Kicad MUST be configured properly to use all the files in this repo. Once you have Kicad installed, under Preferences->Configure Paths..., make the following entries:
 
-1 - KICAD_USER_DIR -> set to the root location of where you placed the above repository.
-2 - KICAD_USER_LIBRARY = ${KICAD_USER_DIR}/Library
-3 - KICAD_USER_MODEL_DIR = ${KICAD_USER_LIBRARY}/models
-4 - KICAD_USER_TEMPLATE_DIR	= ${KICAD_USER_LIBRARY}/templates	
+1. KICAD_USER_DIR -> set to the root location of where you placed the above repository.
+2. KICAD_USER_LIBRARY = ${KICAD_USER_DIR}/Library
+3. KICAD_USER_MODEL_DIR = ${KICAD_USER_LIBRARY}/models
+4. KICAD_USER_TEMPLATE_DIR	= ${KICAD_USER_LIBRARY}/templates	
 
 Kicad will operate mostly normally if these are not set properly. You will notice an issue when you view the PCB in 3D mode.
 
-***NOTE***: after makeing a release build in git, if your rendered 3D images are missing components, ensure the path to EVERY component model is set to ${KICAD_USER_MODEL_DIR}/<model name>.
+***NOTE***: after makeing a release build in git, if your rendered 3D images are missing components, ensure the path to EVERY component model is set to `${KICAD_USER_MODEL_DIR}/<model name>`.
 
 Kicad sometimes replaces the variable with an expansion and that FAILS during the build process because the expanded variable is local and does not match the build environment.
 
